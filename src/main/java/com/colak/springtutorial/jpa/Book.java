@@ -31,6 +31,7 @@ public class Book {
     @Column(name = "author", nullable = false)
     private String author;
 
+    // If @Temporal is not present JDBC reads it as java.sql.Timestamp
     @Temporal(TemporalType.DATE) // Only the date part (YYYY-MM-DD)
     @Column(name = "publication_date", nullable = false)
     private Date publicationDate;
